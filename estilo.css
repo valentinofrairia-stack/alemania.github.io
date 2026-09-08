@@ -1,0 +1,365 @@
+
+:root {
+    --fondo: #f3f1eb;
+    --texto: #202020;
+    --rojo: #b5121b;
+    --amarillo: #e5ad00;
+    --negro: #1b1b1b;
+    --blanco: #ffffff;
+    --borde-suave: #dedbd2;
+}
+
+#titulo{
+        text-align: center;
+        font-size: 50px;
+        background-size: cover;
+        background-image: url("https://www.google.com/imgres?q=bandera%20de%20alemania&imgurl=https%3A%2F%2Fthumb.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fba%2FFlag_of_Germany.svg%2F330px-Flag_of_Germany.svg.png%3Futm_source%3Des.wikipedia.org%26utm_campaign%3Dparser%26utm_content%3Dthumbnail&imgrefurl=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FBandera_de_Alemania&docid=lBs95vONGwZAdM&tbnid=qd7qHY7luhN2NM&vet=12ahUKEwj7mfq__cqWAxX3HrkGHSBkEHsQnPAOegQISBAA..i&w=330&h=198&hcb=2&ved=2ahUKEwj7mfq__cqWAxX3HrkGHSBkEHsQnPAOegQISBAA");
+}
+#apartadotitulo{
+        display: flex;
+        flex-direction: column;
+}
+#imagenbandera{
+        display: flex;
+        justify-content: center; 
+        align-items: center;    
+        height: 50vh;
+        max-width: 600px;    
+        margin: 0 auto;  
+
+}         
+.bandera{
+        width: 100%;
+        display: block;
+        height: 100%;
+}
+.introduccion{display:flex}
+
+body{
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+}
+
+.tema {
+    display: none;
+}
+
+.tema.activo {
+    display: block;
+}
+
+.navbar li a.active {
+    background-color: var(--rojo);
+    color: var(--amarillo);
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--negro), #343434);
+    color: var(--blanco);
+    text-align: center;
+    padding-top: 40px;
+    overflow: hidden;
+    position:sticky;
+    top:0;
+}
+
+.bandera-corner {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.bandera-gif {
+    width: 82px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    display: block;
+    background: transparent;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    filter: saturate(1.1) contrast(1.2);
+    pointer-events: none;
+}
+
+.grupo-5b {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--amarillo);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    line-height: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin: 10px 0 5px 0;
+}
+
+.hero-content p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.bandera-hero {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Menú de Navegación Sticky */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--negro);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar li a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: var(--rojo);
+    color: var(--amarillo);
+}
+.contenido {
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 24px 48px;
+    color: var(--texto);
+}
+
+.subtitulo {
+    border-left: 8px solid var(--rojo);
+    padding: 4px 18px;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, rgba(229, 173, 0, 0.24), transparent);
+    border-bottom: 1px solid var(--borde-suave);
+}
+
+.subtitulo h2 {
+    margin: 0;
+    color: var(--texto);
+}
+
+.intro-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+.textointro {
+    flex: 2 1 0;
+    min-height: 200px;
+    margin: 0;
+}
+
+.imgbanderaintro {
+    flex: 0 0 33%;
+    width: 33%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin-left: 0;
+}
+.galeria-doble {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.fotosdeintroduccion {
+    flex: 1;                  
+    margin: 0;                
+    background-color: var(--blanco);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fotosdeintroduccion img {
+    width: 100%;              
+    height: 200px;            
+    object-fit: cover;        
+    border-radius: 6px;
+    display: block;
+}
+
+/* Estilo del epígrafe */
+.fotosdeintroduccion figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #55504a;
+    text-align: center;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.imagen-seccion {
+    max-width: 760px;
+    margin: 28px auto 0;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.imagen-seccion img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+.imagen-seccion figcaption,
+.foto-comida figcaption {
+    color: #55504a;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.imagen-cultura {
+    max-width: 520px;
+}
+
+.imagen-cultura img {
+    object-fit: contain;
+    background: #202020;
+}
+
+.galeria-comida {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.galeria-apartado {
+    max-width: 900px;
+    margin: 22px auto 30px;
+}
+
+.galeria-informacion .foto-comida img {
+    height: 220px;
+    object-fit: contain;
+    background-color: #f1f1ed;
+}
+
+.galeria-en-texto {
+    width: 100%;
+    max-width: none;
+    margin: 16px 0 8px;
+}
+
+.foto-comida {
+    margin: 0;
+    padding: 8px;
+    background: var(--blanco);
+    border-top: 5px solid var(--amarillo);
+    border-left: 1px solid var(--borde-suave);
+    border-right: 1px solid var(--borde-suave);
+    border-bottom: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.foto-comida img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        padding-top: 24px;
+    }
+
+    .bandera-corner {
+        top: 10px;
+        left: 10px;
+    }
+
+    .bandera-gif {
+        width: 58px;
+    }
+
+    .grupo-5b {
+        font-size: 1.2rem;
+    }
+
+    #imagenbandera {
+        width: 80%;
+        height: auto;
+        max-height: 35vh;
+    }
+
+    .navbar li a {
+        padding: 11px 12px;
+        font-size: 0.9rem;
+    }
+
+    .contenido {
+        padding: 20px 14px 36px;
+        font-size: 18px;
+    }
+
+    .intro-row,
+    .galeria-doble {
+        flex-direction: column;
+    }
+
+    .imgbanderaintro,
+    .fotosdeintroduccion {
+        width: 100%;
+        flex-basis: auto;
+        max-width: none;
+    }
+
+    .galeria-comida {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .foto-comida img {
+        height: 125px;
+    }
+}
